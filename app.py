@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import joblib
 
-# تحميل الموديل و scaler
+# scaler
 model = joblib.load("riskinvest_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
@@ -24,4 +24,4 @@ if st.button("Prédire"):
     prediction = model.predict(X_input)
     predicted_price = scaler.inverse_transform(prediction.reshape(-1,1))[0][0]
 
-    st.success(f"📊 Prix prédit : {predicted_price:.2f}")
+    st.success(f"📊 Prix prédit : {predicted_price:.2f}") 
