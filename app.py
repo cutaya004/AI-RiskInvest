@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+import pandas
+import scikit-learn
 import joblib
 
 # scaler
