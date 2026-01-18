@@ -23,6 +23,10 @@ if st.button("Prédire"):
     prices_scaled = scaler.transform(prices_array)
     X_input = prices_scaled.reshape(1, -1)
 
+model = joblib.load("models/riskinvest_model.pkl")
+scaler = joblib.load("models/scaler.pkl")
+
+
     prediction = model.predict(X_input)
     predicted_price = scaler.inverse_transform(prediction.reshape(-1,1))[0][0]
 
