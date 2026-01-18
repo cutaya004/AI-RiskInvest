@@ -1,4 +1,6 @@
 import sklearn
+from sklearn.linear_model import LinearRegression
+print("sklearn installed correctly")
 import streamlit as st
 import numpy as np
 import pandas
